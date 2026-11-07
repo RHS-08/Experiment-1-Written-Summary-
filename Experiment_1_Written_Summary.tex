@@ -293,9 +293,7 @@ During our data collection, magnetic fields of 70,
 Figure 2 is a plot of counts as a function of velocity selector voltage for a magnetic field of 70 gauss, collected as described in the above procedure.
 The electron counting process is described by poisson statistics, thus, the statistical uncertainty of each total count datum is the square root of its
 total count. To more accurately determine $V_0$, a function is fitted to the count vs voltage data using $\chi^2$ minimization. This function is of the
-form of a 3 parameter gaussian offset by an additional constant parameter. The equilibrium voltage $V_0$ is given by the fitted Gaussian peak position,
-and its statistical uncertainty is obtained from SciPy's $\texttt{curve\_fit}$ fitting procedure.
-
+form of a 3 parameter gaussian offset by an additional constant parameter.
 \begin{figure}[htbp]
     \centering
     \includegraphics[
@@ -304,6 +302,11 @@ and its statistical uncertainty is obtained from SciPy's $\texttt{curve\_fit}$ f
     \caption{Total counts as a function of velocity selector voltage for a magnetic field of 70 gauss}
     \label{fig:apparatus}
 \end{figure}
+
+The equilibrium voltage $V_0$ is given by the fitted Gaussian peak position,
+and its statistical uncertainty is obtained from SciPy's $\texttt{curve\_fit}$ fitting procedure. Using this process, we determine $V_0$ for each magnetic field.
+
+
 
 If the nonrelativistic regime properly describes the momentum velocity relationship of electrons in this apparatus, we expect
 $\beta=(e/m)B\rho c$, where $\beta=v/c=V_0/dBc$. Thus, we expect a linear relationship between $\beta$ and $B$ in the nonrelativistic regime. Figure 3 shows
