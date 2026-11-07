@@ -329,7 +329,7 @@ $\beta\gamma$ as a function of $B$. We fit a line of the expected form $\beta\ga
 uncertainties in $\beta\gamma$. The fitted slope $k$ gives the relativistic charge-to-mass ratio through $e/m=ck/\rho$.
 
 The data fitted to the nonrelativistic regime produced a reduced $\chi^2$ of , while the relativistic regime produced a reduced $\chi^2$ of . This indicates that the relativistic regime provides a better description of the data.
-
+The fitting
 
 \begin{figure}[htbp]
     \centering
@@ -342,7 +342,7 @@ The data fitted to the nonrelativistic regime produced a reduced $\chi^2$ of , w
 
 
 We identified three definite sources of systematic uncertainty for this experiment: magnetic field nonuniformity, the $\rho$ measurement and the $d$ measurement.
-To quantify the systematic uncertainty due to our assumption of a uniform magnetic field, we measured the magnetic field at 5 known positions (positions 1-5) along the
+To quantify the systematic uncertainty in our magnetic field measurement due to our assumption of a uniform magnetic field, we measured the magnetic field at 5 known positions (positions 1-5) along the
 electron trajectory. The exact procedure was as follows:
 \begin{enumerate}
 \item  Place a calibrated Hall effect magnetometer at position 1. Adjust voltage and current of the electromagnet to produce a desired magnetic field. Record the values of voltage and current.
@@ -350,6 +350,7 @@ electron trajectory. The exact procedure was as follows:
 \item  Repeat (2.) until magnetic field is measured at all 5 known positions.
 \item  Repeat (1.)-(3.) for all 8 magnetic fields used in the $p$, $v$ measurements.
 \end{enumerate}
+
 
 \begin{figure}[htbp]
     \centering
@@ -362,9 +363,34 @@ electron trajectory. The exact procedure was as follows:
 
 
 Figure 5 shows the measured magnetic field as a function of position along the electron trajectory when the magnetic field at position 1 is 95 gauss.
-The systematic uncertainty due to magnetic field nonuniformity can be estimated from the variation of the measured magnetic field across the different positions.
+The systematic uncertainty due to magnetic field nonuniformity was estimated by calculating the standard deviation of the five position measurements
+at each field setting. These standard deviations were converted into percentage uncertainties, then averaged with equal weights over the eight field
+settings, yielding a common magnetic field systematic uncertainty.
 
+The systematic uncertainties due to $\rho$ and $d$ were estimated from the measurement uncertainties in the orbit radius, $\rho=(0.203\pm0.002),\mathrm{m}$,
+and the plate separation, $d=(1.80\pm0.03),\mathrm{mm}$.
 
+These systematic uncertainties were propagated into the values of $e/m$ determined from the fitted slopes for the relativistic and nonrelativistic models.
+The contributions from magnetic field nonuniformity, plate separation, and orbit radius were combined in quadrature, assuming the three sources are independent.
+The resulting uncertainties are shown in Table~\ref{tab}.
+\begin{table}[htbp]
+    \centering
+    \caption{Systematic uncertainty contributions to $e/m$
+    determined from the fitted slopes. Contributions are
+    combined in quadrature, assuming independent sources.}
+    \label{tab:systematic_budget}
+    \begin{tabular}{lcc}
+        \hline
+        Source & Relativistic & Nonrelativistic \\
+        \hline
+        Magnetic field   & $7.49\%$ & $4.69\%$ \\
+        Plate separation & $3.65\%$ & $1.69\%$ \\
+        Orbit radius     & $1.00\%$ & $1.00\%$ \\
+        \hline
+        Total systematic & $8.39\%$ & $5.09\%$ \\
+        \hline
+    \end{tabular}
+\end{table}
 
 
 
