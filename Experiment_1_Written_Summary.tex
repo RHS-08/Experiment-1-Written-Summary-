@@ -390,16 +390,33 @@ electron trajectory. The exact procedure was as follows:
 
 
 Figure 5 shows the measured magnetic field as a function of position along the electron trajectory when the magnetic field at position 1 is 95 gauss.
-The systematic uncertainty due to magnetic field nonuniformity was estimated by calculating the standard deviation of the five position measurements
-at each field setting. These standard deviations were converted into percentage uncertainties, then averaged with equal weights over the eight field
-settings, yielding a common magnetic field systematic uncertainty.
 
-The systematic uncertainties due to $\rho$ and $d$ were estimated from the measurement uncertainties in the orbit radius, $\rho=(0.203\pm0.002)\mathrm{m}$,
-and the plate separation, $d=(1.80\pm0.03)\mathrm{mm}$.
+At each setting, we calculated the sample standard deviation of the five
+field measurements and divided it by their mean to obtain a fractional
+variation. Averaging the eight fractional variations with equal weights
+gave $2.3\%$. We adopted this as a common
+fractional systematic uncertainty scale for the magnetic field.
 
-These systematic uncertainties were propagated into the values of $e/m$ determined from the fitted slopes for the relativistic and nonrelativistic models.
-The contributions from magnetic field nonuniformity, plate separation, and orbit radius were combined in quadrature, assuming the three sources are independent.
-The resulting uncertainties are shown in Table~\ref{tab}.
+The geometric uncertainties were taken from the orbit radius,
+$\rho=(0.203\pm0.002)\,\mathrm{m}$, and plate separation,
+$d=(1.80\pm0.03)\,\mathrm{mm}$~\cite{labmanual}.
+
+These input uncertainties were propagated into the charge-to-mass ratios
+obtained from the fitted slopes. For each source, the input was shifted
+upward and downward by its uncertainty, the derived quantities and fit
+weights were recalculated, and the linear fit was repeated. The larger
+absolute change in $e/m$ was retained as that source's contribution.
+The magnetic-field shifts were applied coherently to all eight settings,
+treating the adopted fractional field uncertainty as a shared
+systematic scale.
+
+The three contributions were combined in quadrature, assuming independent
+sources. Table~\ref{tab:systematic_budget} lists the resulting fractional
+uncertainties in $e/m$. The different contributions for the two models
+arise from their different dependence on the measured quantities,
+including the additional velocity dependence of $\gamma$ in the
+relativistic model.
+
 
 \begin{table}[htbp]
     \centering
@@ -418,6 +435,27 @@ The resulting uncertainties are shown in Table~\ref{tab}.
     \caption{Systematic uncertainty contributions to $e/m$
    }
 \end{table}
+
+
+Including these systematic estimates, the fitted-slope measurements are
+\begin{align}
+    \left(\frac{e}{m}\right)_{\mathrm{rel}}
+    &=
+    (1.515 \pm 0.004_{\mathrm{stat}}
+    \pm 0.127_{\mathrm{syst}})
+    \nonumber\\[-2pt]
+    &\qquad{}\times10^{11}\,\mathrm{C\,kg^{-1}},
+\end{align}
+and
+\begin{align}
+    \left(\frac{e}{m}\right)_{\mathrm{NR}}
+    &=
+    (1.034 \pm 0.0013_{\mathrm{stat}}
+    \pm 0.053_{\mathrm{syst}})
+    \nonumber\\[-2pt]
+    &\qquad{}\times10^{11}\,\mathrm{C\,kg^{-1}}.
+\end{align}
+
 
 
 \section{Conclusion}
