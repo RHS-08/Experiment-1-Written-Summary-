@@ -292,27 +292,26 @@ During our data collection, magnetic fields of 70, 80, 90, 95, 100, 105, 110, an
 
 
 \section{Results and Analysis}
-Figure~\ref{fig:counts} is a plot of counts as a function of velocity selector voltage for a magnetic field of 70 gauss, collected as described in the above procedure.
-The electron counting process is described by poisson statistics, thus, the statistical uncertainty of each total count datum is the square root of its
-total count. To more accurately determine $V_0$, a function is fitted to the count vs voltage data using $\chi^2$ minimization. This function is of the
-form of a 3 parameter gaussian offset by an additional constant parameter.
+Figure~\ref{fig:counts} is a plot of counts as a function of velocity selector voltage for a magnetic field of 70 Gauss, collected as described in the above procedure.
+Electron counting was treated as a Poisson process, giving a statistical uncertainty of $\sqrt{N}$ for a total count $N$. To determine $V_0$, the count-versus-voltage
+data were fitted with a Gaussian plus a constant background using $\chi^2$ minimization.
 \begin{figure}[htbp]
     \centering
     \includegraphics[
         width=\columnwidth
     ]{Figure 1.pdf}
-    \caption{Total counts as a function of velocity selector voltage for a magnetic field of 70 gauss}
+    \caption{Total counts versus selector voltage at 70 gauss. The curve is a Gaussian plus constant-background fit. Error bars represent Poisson counting uncertainties.}
     \label{fig:counts}
 \end{figure}
 
 The equilibrium voltage $V_0$ is given by the fitted Gaussian peak position,
-and its statistical uncertainty is obtained from SciPy's $\texttt{curve\_fit}$ fitting procedure.
+and its statistical uncertainty is obtained from SciPy's \texttt{curve\_fit} fitting procedure.
 Using this process, we determine $V_0$ for each magnetic field, which, along with the parameters of the apparatus, allows us to calculate the electron velocity.
 
 
 
 If the nonrelativistic regime properly describes the momentum-velocity relationship of electrons in this apparatus, we expect
-$\beta=(e/mc)B\rho $, where $\beta=v/c=V_0/dBc$. Thus, we expect a linear relationship between $\beta$ and $B$ in the nonrelativistic regime. Figure 3 shows
+$\beta=\frac{e}{mc}B\rho$, where $\beta=v/c=V_0/(dBc)$. Thus, we expect a linear relationship between $\beta$ and $B$ in the nonrelativistic regime. Figure~\ref{fig:beta_vs_B} shows
 $\beta$ as a function of $B$. We fit a line of the expected form $\beta=kB$ through the origin using $\chi^2$ minimization, weighted by the statistical
 uncertainties in $\beta$. The fitted slope $k$ gives the nonrelativistic charge-to-mass ratio through $e/m=ck/\rho$.
 
@@ -321,12 +320,12 @@ uncertainties in $\beta$. The fitted slope $k$ gives the nonrelativistic charge-
     \includegraphics[
         width=\columnwidth
     ]{Figure 5.pdf}
-    \caption{$\beta$ as a function of $B$. Also shown are the expected nonrelativistic and relativistic relationships using a reference value of $e/m$}
+    \caption{$\beta$ versus magnetic field. The solid line is the nonrelativistic fit through the origin. Dotted curves show the nonrelativistic and relativistic predictions using the reference value of $e/m$. Error bars are statistical only.}
     \label{fig:beta_vs_B}
 \end{figure}
 
 If the relativistic regime properly describes the momentum-velocity relationship of electrons in this apparatus, we expect
-$\beta \gamma=(e/mc)B\rho $, where $\beta=v/c=V_0/dBc$. Thus, we expect a linear relationship between $\beta\gamma$ and $B$ in the relativistic regime. Figure 4 shows
+$\beta\gamma=\frac{e}{mc}B\rho$, where $\beta=v/c=V_0/(dBc)$. Thus, we expect a linear relationship between $\beta\gamma$ and $B$ in the relativistic regime. Figure~\ref{fig:beta_gamma_vs_B} shows
 $\beta\gamma$ as a function of $B$. We fit a line of the expected form $\beta\gamma=kB$ through the origin using $\chi^2$ minimization, weighted by the statistical
 uncertainties in $\beta\gamma$. The fitted slope $k$ gives the relativistic charge-to-mass ratio through $e/m=ck/\rho$.
 
@@ -335,7 +334,7 @@ uncertainties in $\beta\gamma$. The fitted slope $k$ gives the relativistic char
     \includegraphics[
         width=\columnwidth
     ]{Figure 4.pdf}
-    \caption{$\beta\gamma$ as a function of $B$}
+    \caption{$\beta\gamma$ versus magnetic field. The solid line is the relativistic fit through the origin. Dotted curves show the predictions of both models using the reference value of $e/m$. Error bars are statistical only.}
     \label{fig:beta_gamma_vs_B}
 \end{figure}
 
